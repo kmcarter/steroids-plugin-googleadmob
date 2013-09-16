@@ -27,7 +27,7 @@
         </config-file>
 
         <source-file src="src/android/AdMobPlugin.java"
-			target-dir="src/com/adobe/plugins" />
+			target-dir="src/com/google/cordova/plugin" />
         <source-file src="src/android/GoogleAdMobAdsSdk-6.4.1.jar"
 			target-dir="libs" />
     </platform>
