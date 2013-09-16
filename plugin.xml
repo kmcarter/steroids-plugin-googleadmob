@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.GoogleAdmob"
+    version="2.1.3">
+
+    <name>Google Admob for PhoneGap</name>
+	<author>Kelly Carter</author>
+
+	<description>
+		This plugin allows you to display Google Admob ads in your PhoneGap application.
+		Based on: https://github.com/rajpara11/phonegap-plugins/tree/master/Android/AdMobPlugin
+	</description>
+	
+	<license>MIT</license>
+    
+    <asset src="www/AdMobPlugin.js" target="AdMobPlugin.js" />
+    
+	<engines>
+      <engine name="cordova" version="&lt;3.0.0" />
+    </engines>	
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="plugins">
+            <plugin name='AdMobPlugin' value='com.google.cordova.plugin.AdMobPlugin'/>
+        </config-file>
+
+        <source-file src="src/android/AdMobPlugin.java"
+			target-dir="src/com/adobe/plugins" />
+        <source-file src="src/android/GoogleAdMobAdsSdk-6.4.1.jar"
+			target-dir="libs" />
+    </platform>
+</plugin>
